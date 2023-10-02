@@ -1,15 +1,17 @@
-// import express from "express";
+import express from "express";
+import router from "./controllers/index";
 
-// const app = express();
+const app = express();
 
-// app.get('/', (req, res) => {
-    
-// });
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/../views');
+app.use('/static', express.static(__dirname + '/../public'));
 
-// app.listen(5000);
+app.use('/', router);
 
-const add = (a: number, b: number): number => {
-    return a + b;
-}
+app.listen(5000, () => {
+    let timezoneOffsetMs = 9 * 60 * 60 * 1000;
+    let now = new Date(Date.now() + timezoneOffsetMs);
 
-console.log(add(2, 3));
+    console.log(`Server started at ${now.toTimeString()}!`)
+});

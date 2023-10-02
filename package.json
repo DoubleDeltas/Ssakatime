@@ -4,7 +4,8 @@
   "description": "SSAFY Wakatime leaderboard",
   "main": "dist/src/app.js",
   "scripts": {
-    "start": "tsc & node dist/src/app.js"
+    "start": "tsc & node dist/src/app.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/app.ts"
   },
   "repository": "git+https://github.com/DoubleDeltas/Ssakatime.git",
   "keywords": [
@@ -24,5 +25,8 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
   }
 }
