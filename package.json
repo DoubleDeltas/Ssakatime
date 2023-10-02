@@ -2,9 +2,9 @@
   "name": "ssakatime",
   "version": "1.0.0",
   "description": "SSAFY Wakatime leaderboard",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "/test"
+    "start": "tsc src/app.js & node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "typescript": "^5.2.2"
   }
 }
